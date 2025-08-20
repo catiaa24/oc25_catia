@@ -5,13 +5,22 @@ Je m'appelle Catia. Je suis étudiante au gymnase du Bugnon. J'ai pris l'OC info
 
 ## Code
 
-Voici un code qui permet de print 10 fois le mot <ins> "Bonjour !" </ins>
+**Voici un code qui permet de _print_ 10 fois le mot <ins> "Bonjour !" </ins>**
 ```
-for i in range(10):
+for i in range(10): # de 1 à 10
   print("Bonjour !")
-`rgb(250,0,0)`
+```
+**Ou bien il est également possible de cette façon**
+```
+for i in range(1, 11): # de 1 à 10
+  print("Bonjour !")
 ```
 ## Couleur
 
-Ma couleur préférée est le `#EE82EE`
+  > Ma _couleur_ préférée est le `#EE82EE`
+
+## Tests
+~ERROR~
+
+Le monde est <sup>petit</sup>
 
