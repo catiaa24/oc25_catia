@@ -4,7 +4,7 @@ Catia Pinto Ferreira
 introduction au micro:bit
 
 programme démonstrateur avec 10 programmes
-bouton A : incrémente programme
+bouton A : incrémente le programme
 bouton B : execute
 
 Programmes :
