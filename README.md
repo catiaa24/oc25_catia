@@ -15,9 +15,6 @@ for i in range(10): # de 1 à 10
 for i in range(1, 11): # de 1 à 10
   print("Bonjour !")
 ```
-## Couleur
-
-  > Ma _couleur_ préférée est le `#EE82EE`
 
 ## Tests
 ~ERROR~
