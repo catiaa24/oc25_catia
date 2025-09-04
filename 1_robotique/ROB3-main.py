@@ -49,23 +49,30 @@ while True:
     # dessiner un V, mesurer l'angle
     if prog == 1:
         if button_b.is_pressed():
-            
+            robot.move(60, 60, 1000)
+            robot.move(60, -60, 1000)
+            robot.move(60, 60, 1000)
 
     # dessiner un S, mesurer l'angle de l'arc
     if prog == 2:
-        ...
+        if button_b.is_pressed():
+            robot.move(60, 0, 2000)
+            robot.move(0, 60, 4000)
             
     # dessiner un triangle
     if prog == 3:
         if button_b.is_pressed():
             for i in range(3):
-                ...
+                robot.move(60, 60, 1250)
+                robot.move(60, -60, 730)
 
     # dessiner un hexagone
     if prog == 4:
         if button_b.is_pressed():
             for i in range(6):
-                ...
+                robot.move(60, 60, 1250)
+                robot.move(60, -60, 730)
+                
 
     # lire les 2 capteurs de lumière
     if prog == 5:
@@ -113,3 +120,4 @@ while True:
                 music.play(music.BA_DING)
             elif msg == '1':
                ...
+            
