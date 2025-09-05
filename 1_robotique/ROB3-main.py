@@ -4,7 +4,7 @@ TP robot
 Nom: Pinto Ferreira
 Classe: 3M2
 Date: 2.09.25
-No du robot: 3
+No du robot: 6
 
 Dans ce TP vous allez apprendre comment
 - contrôler 2 moteurs
@@ -63,15 +63,15 @@ while True:
     if prog == 3:
         if button_b.is_pressed():
             for i in range(3):
-                robot.move(60, 60, 1250)
-                robot.move(60, -60, 730)
+                robot.move(62, 62, 1000) # calculs executer par rapport prog 1
+                robot.move(60, -60, 1100) # calculs executer par rapport prog 1
 
     # dessiner un hexagone
     if prog == 4:
         if button_b.is_pressed():
             for i in range(6):
-                robot.move(60, 60, 1250)
-                robot.move(60, -60, 730)
+                robot.move(62, 62, 500) # calculs exectuer par rapport prog 3
+                robot.move(60, -60, 575) # calculs executer par rapport prog 3
                 
 
     # lire les 2 capteurs de lumière
@@ -120,4 +120,3 @@ while True:
                 music.play(music.BA_DING)
             elif msg == '1':
                ...
-            
