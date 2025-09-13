@@ -1,10 +1,10 @@
 """
 TP robot 2
 
-Nom: ...
-Classe: ...
-Date: ...
-No du robot: ...
+Nom: Pinto Ferreira Catia
+Classe: 3M2
+Date: 09.09.25
+No du robot: 6
 
 Dans ce TP vous allez explorer comment
 - prog 0 : télécommander le robot et la pince
@@ -141,20 +141,33 @@ jingle = ('e5:2', 'e', 'e:4',
           'g', 'g', 'f', 'd',
           'c:8')
 
-generique = ['E5:4', 'E5:4', 'P:4', 'E5:4',
-            'P:4', 'C5:4', 'E5:4', 'P:4',
-            'G5:8', 'P:8',
-            'G4:8', 'P:8',
+mario = ( # aide de copilot
+    'E5:2', 'E5:3',
+    'E5:2','C5:2', 'E5:3', 'G5:4',
+         
+    'G4:4','C5:3', 'G4:3', 'E4:3',
+    'A4:2', 'B4:2', 'A#4:2', 'A4:2',
+    'G4:3', 'E5:2', 'G5:2', 'A5:3',
+    'F5:2', 'G5:3', 'E5:2', 'C5:2', 'D5:2', 'B4:4',
 
-            'C5:4', 'P:4', 'G4:4', 'P:4',
-            'E4:4', 'P:4', 'A4:4', 'P:4',
-            'B4:4', 'P:4', 'A#4:4', 'A4:4',
-            'G4:8', 'E5:8', 'G5:8',
-            'A5:4', 'P:4', 'F5:4', 'G5:4',
-            'P:4', 'E5:4', 'P:4', 'C5:4', 'D5:4',
-            'B4:4', 'P:8'
-             
-            ]
+    'C5:3', 'G4:3', 'E4:3',
+    'A4:2', 'B4:2', 'A#4:2', 'A4:2',
+    'G4:3', 'E5:2', 'G5:2', 'A5:3',
+    'F5:2', 'G5:3', 'E5:2', 'C5:2', 'D5:2', 'B4:4',
+    
+    'G5:2', 'F#5:2', 'F5:2', 'D5:2', 'E5:2',
+    'G4:2', 'A4:2', 'C5:2',
+    'A4:2', 'C5:2', 'D5:2',
+
+    'G5:2', 'F#5:2', 'F5:2', 'D5:2', 'E5:2',
+    'C6:2', 'C6:2', 'C6:4',
+
+    'G5:2', 'F#5:2', 'F5:2', 'D5:2', 'E5:2',
+    'G4:2', 'A4:2', 'C5:2',
+    'A4:2', 'C5:2', 'D5:2',
+
+    'D#5:2', 'D5:2', 'C5:2'  
+        )
 
 while True:
     # le bouton A incrémente les programmes (0..9)
@@ -240,7 +253,8 @@ while True:
             elif msg == 'd':
                 arc2(360)
             elif msg == '2':
-                music.play(generique, wait=False, loop=True)
+                music.set_tempo(bpm=120)
+                music.play(mario, wait=False, loop=True)
             elif msg == '1':
                 music.stop()
 
