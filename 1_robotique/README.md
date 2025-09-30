@@ -21,3 +21,7 @@ for i in range(1, 11): # de 1 à 10
 
 Le monde est <sup>petit</sup>
 
+# Insertion d'une image
+
+![](images/robot_2.jpeg)
+
