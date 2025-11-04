@@ -1,0 +1,66 @@
+body { /*body : c'est le selecteur - ce que on veut changer et ce qui suit c'est l'instruction*/
+    background-color: rgb(58, 58, 57); /*backround : paramètre, et bisque c'est la valeur*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*le police mis a bout ça permet d'élargir, si le browser marche pas il prend la suivante
+    sherif : c'est les petit très en bas et en haut des lettres*/
+
+} /*tout ce qui est dans la page web*/
+
+h1 {
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+    border-color: rgb(86, 89, 255);
+    /*background-color: beige;*/
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+h2, h3 {
+    color: rgb(123, 151, 254);
+}
+
+p {
+    color: aliceblue;
+}
+
+/*comment faire pour mettre les paragraphe dans des style différents : mettre id dans html*/
+
+#bienvenue {
+    border: solid 1px;/*dotted ou dashed à la place du solid*/
+    padding: 5px;
+    background-color: black;
+    border-radius: 3px;
+    
+}
+
+/*maintenant avec class au lieu de id*/
+
+.important {
+    border: solid 1px;/*dotted ou dashed à la place du solid*/
+    padding: 6px;
+    background-color: black;
+    border-radius: 3px;
+    /*on peut aussi mettre en évidence le strong dans htlm*/
+}
+
+.important > strong { /*on peut aussi mettre en évidence le strong dans htlm*/
+    /*pour modifier seulement les trong dans un paragraphe important : .important > strong 
+    sinon juste strong*/
+    text-decoration: underline;
+    color: rgb(104, 203, 252);
+}
+
+/*
+pour les élément spécifique : h1 h2 ... etc
+pour les id : # ...
+pour les class : . ...
+pour spécifique : . ... > # ... (je crois)
+
+et puis mettre {} à chaque fois
+*/
+
+
+a {
+    color: rgb(255, 170, 0);
+}
