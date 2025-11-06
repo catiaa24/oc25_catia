@@ -7,10 +7,12 @@ body { /*body : c'est le selecteur - ce que on veut changer et ce qui suit c'est
 } /*tout ce qui est dans la page web*/
 
 h1 {
+    
     border: solid;
     border-width: 2px;
     padding: 5px;
     border-color: rgb(86, 89, 255);
+    border-left: orangered solid 5px;
     /*background-color: beige;*/
     border-radius: 10px;
     color: aliceblue;
