@@ -12,7 +12,7 @@ h1 {
     border-width: 2px;
     padding: 5px;
     border-color: rgb(86, 89, 255);
-    border-left: orangered solid 5px;
+    /* border-left: rgb(0, 128, 255) solid 5px;*/
     /*background-color: beige;*/
     border-radius: 10px;
     color: aliceblue;
