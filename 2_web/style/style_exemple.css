@@ -66,3 +66,17 @@ et puis mettre {} à chaque fois
 a {
     color: rgb(255, 170, 0);
 }
+
+
+
+.guerrier {
+    background-color: red;
+}
+
+.magicien {
+    background-color: blue;
+}
+
+.voleur {
+    background-color: gray; /* faut défninir attribut classe pour que style vienne dans js*/
+}
