@@ -171,8 +171,9 @@ bouton = document.getElementById('bouton');
 
 document.addEventListener('keydown', function(event) {
 
-  if (event.key === "z")
-    console.log("x");
+  if (event.key === " ")
+    console.log("Bonjour !");
+  
 
 });
 
