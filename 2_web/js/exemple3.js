@@ -38,7 +38,7 @@ const context = dessin.getContext("2d");
 
 
 //trait en js c'est path
-context.strokeStyle ="white";
+// context.strokeStyle ="white";
 context.beginPath(); // on commence un chemin
 context.moveTo(250,100); //cordonnée 
 context.lineTo(100, 250); //construciton de la ligne (de ou jusqu'à ou) (donnée la postion vers ou on veut aller)
@@ -53,13 +53,24 @@ context.stroke(); //dessine le trait sinon y a rien
 // rond ou arc de cercle
 context.beginPath();
 context.arc(300, 150, 50, 0, 2*Math.PI); // cordonnées puis rayon et angle de départ et angle de fin en rad
-context.fillStyle = "red";
+context.fillStyle = "Black";
 context.fill();
 context.stroke();
 
+context.beginPath();
+context.arc(200, 150, 50, 0, 2*Math.PI/2); // cordonnées puis rayon et angle de départ et angle de fin en rad
+context.fillStyle = "Black";
+context.fill();
+context.stroke();
+
+context.beginPath();
+context.arc(250, 250, 50, 0, Math.PI); // cordonnées puis rayon et angle de départ et angle de fin en rad
+context.fillStyle = "Black";
+context.lineWidth = 6;
+context.stroke();
 
 
-
+// exemple avec chatgpt
 const canvas = document.getElementById("c");
 const ctx = canvas.getContext("2d");
 

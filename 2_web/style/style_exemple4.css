@@ -1,0 +1,54 @@
+body {
+    /* border: solid 1px rgb(247, 0, 255); définition de la grandeur des boîte */
+    max-width: 600px; /*limiter la grandeur au max*/
+    margin: auto; /*centrer le texte avec la marge ou utiliser left et right et top et bottom*/
+
+    padding: 15px; /*éviter que tout soit collé au bord de l'écran donc entre l'élément et les border*/
+    /*encore une fois on peut mettre aussi left, right, bottom, top*/
+}
+
+
+
+
+h1, h2, p, div {
+    /* border: solid 1px orangered; */
+
+}
+
+#navigation {
+    background-color: rgb(130, 130, 255);
+    padding: 5px
+}
+
+
+#navigation ul {
+    /* border: solid 1px blue; */
+    width: fit-content; /*réduire le la grandeur de ul*/
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#navigation li{
+    display: inline; /*les mettre alignée*/
+    /* border: solid 1px black; */
+    margin: 3px;
+}
+
+a {
+    color: aliceblue;
+}
+
+img.img-centre {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+img.img-float {
+    width: 300px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
