@@ -6,31 +6,35 @@ body {
     padding: 15px;
 }
 
+
+
+/*navigation*/
 #navigation {
     background-color: rgb(30, 30, 30);
     padding: 2px;
     border: solid rgb(98, 0, 255) 3px;
     border-radius: 5px;
 }
-
-
 #navigation ul {
     width: fit-content; /*réduire le la grandeur de ul*/
     padding: 6px;
     margin: auto;
 }
-
-
 #navigation li{
     display: inline; /*les mettre alignée*/
     /* border: solid 1px black; */
     margin: 3px;
 }
 
+
+
+
 canvas.centre {
     width: 350px;
     display: block;
     margin: auto;
+    border: solid rgb(98, 0, 255) 2px;
+    border-radius: 5px;
 }
 
 
@@ -69,15 +73,31 @@ p {
     
 }
 
+
+ul {
+    color: aliceblue;
+}
+
+
+/*mise en évidence dans le text*/
 strong {
+    text-decoration: underline;
+    color: white;
+    
+}
+.titre {
     text-decoration: underline;
     color: rgb(119, 0, 255);
 }
 
+
+
+/*paragaphe important*/
 .important {
     background-color: rgb(70, 0, 135);
     border-radius: 5px;
-    border-left: rgb(93, 2, 191) solid 5px;
+    border-left: rgb(93, 2, 191) solid 3px;
+    
 }
 
 
@@ -90,6 +110,9 @@ img {
     display: block;
 }
 
+
+
+/*liens*/
 a {
     color: rgb(255, 255, 255);
     font-size: 13px;
@@ -119,13 +142,11 @@ hr {
 
 
 
-ul {
-    color: aliceblue;
-}
 
 
 
 
+/*canvas*/
 canvas {
     background-color: rgb(0, 0, 0);
     border-style: solid;
@@ -134,6 +155,13 @@ canvas {
     display: block;
     margin: auto;
     border-radius: 10px;
-    
-    
+}
+.animation {
+    background-color: white;
+    border-style: solid;
+    border-width:2px;
+    border-color: rgb(149, 0, 255) ;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
 }
