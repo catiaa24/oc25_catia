@@ -3,39 +3,107 @@ const anime = document.getElementById("animation"); // récuperer l'élément de
 const ctx_anime = anime.getContext("2d");
 
 
-const canvasSizeX = 500;
-const canvasSizeY = 500;
-const dx = 1;
-const dy = 1;
-var x = 1;
-var y = 1;
+const Xsize = 500/2;
+const Ysize = 400/2;
 
-const tn = new Image();
-//const tn = ctx_anime.arc(250, 150, 50, 0, 2*Math.PI);
+let isPaused = false; // état de pause
+//cercle qui tourne
+let angle = 0;
+let radius = 150;
+const speed = 0.15;
+const shrink = 0.5;
 
-function animation () {
-    tn.src= "/2_web/images/genetic-data-svgrepo-com.svg";
-    
-    window.requestAnimationFrame(draw);
-    
+//cercle qui grandit
+let radius2 = 10;       // rayon initial
+const maxRadius = 30; // limite du rayon
+const growSpeed = 1;   // vitesse d’agrandissement
+
+
+function resetVars() { //fonction pour remmettre variable initiales
+  angle = 0;
+  radius = 150;
+  radius2 = 10;
 }
 
-function draw() { //va dessiner canvas mais un peu décaler - appeler constatment
-    ctx_anime.clearRect(0,0,500,500);
 
-    if (x>canvasSizeX) {
-        ctx_anime.translate(-canvasSizeX,-canvasSizeY);
-        x=1;
-        y=1;
+function init(){ //focntion initiale qui permet d'initier l'animation
+    if (isPaused) return; // si en pause, on arrête ici
+    
+    //effacer le canvas
+    ctx_anime.clearRect(0,0, 500, 400);
+
+
+    //calculer la position du cercle1
+    const x1 = Xsize + radius * Math.cos(angle);
+    const y1 = Ysize + radius * Math.sin(angle);
+    //dessiner le cercle1
+    ctx_anime.beginPath();
+    ctx_anime.strokeStyle ="rgba(255, 72, 0, 1)";
+    ctx_anime.arc(x1,y1,10,0, 2*Math.PI);
+    ctx_anime.lineWidth = 2;
+    ctx_anime.fill();
+    ctx_anime.stroke();
+
+    //calculer la position du cercle2
+    const x2 = Xsize + radius * Math.cos(angle+Math.PI);
+    const y2 = Ysize + radius * Math.sin(angle+Math.PI);
+    //dessiner le cercle2
+    ctx_anime.beginPath();
+    ctx_anime.strokeStyle ="rgba(255, 72, 0, 1)";
+    ctx_anime.arc(x2,y2,10,0, 2*Math.PI);
+    ctx_anime.lineWidth = 2;
+    ctx_anime.fill();
+    ctx_anime.stroke();
+    
+
+
+    //mettre à jour angle et rayon
+    angle += speed;
+    radius-=shrink;
+
+    //continuer l'animation tant que le rayon est positif
+    if (radius > 0) {
+        
+        requestAnimationFrame(init); // Boucle d’animation
     } else {
-        ctx_anime.drawImage(tn, 0, 0, 50, 50);
-        ctx_anime.translate(1,1); //c'est tout le canvas qui est décaler et pas l'atome
-        x = x + dx;
-        y = y + dy;
+        ctx_anime.clearRect(0, 0, 500, 400); // effacer le canvas
+        ctx_anime.beginPath();
+        ctx_anime.strokeStyle ="rgba(255, 72, 0, 1)";
+        ctx_anime.arc(Xsize,Ysize,radius2,0, 2*Math.PI);
+        ctx_anime.lineWidth = 2;
+        ctx_anime.fill();
+        ctx_anime.stroke();
+        if (radius2 < maxRadius) {
+            radius2 += growSpeed;
+            requestAnimationFrame(init);
+        }
     }
     
-        window.requestAnimationFrame(draw);
+ 
 }
 
+document.addEventListener("click", function() {
+    if (maxRadius == radius2) {
+        resetVars(); //remmettre les valeurs initiales
+        init();
+    } if (isPaused === true) { //comparaison stricte
+        isPaused = false;
+        requestAnimationFrame(init);
+    } else if (maxRadius > radius2) {
+        isPaused = true; // mettre en pause
 
-animation();
+    } 
+
+});
+
+
+
+
+init();
+
+
+
+
+
+
+

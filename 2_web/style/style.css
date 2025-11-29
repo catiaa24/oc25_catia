@@ -38,6 +38,8 @@ canvas.centre {
 }
 
 
+
+
 h1 {
     padding: 10px;
     margin:10px;
@@ -110,12 +112,60 @@ img {
     display: block;
 }
 
+img.img-float-f {
+    width: 150px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+
+img.img-float-r {
+    width: 150px;
+    float: right;
+    display: block;
+    margin-right: 10px;
+}
+
+
+figure.left {
+    float: left;
+    margin: 0px 0px 0px 10px;
+    width: 200px;
+    display: block;
+}
+
+figure.right {
+    float: right;
+    margin: 0px 10px 0px 0px;
+    width: 200px;
+    display: block;
+}
+
+figcaption.l {
+    margin: 0px 0px 0px 10px;
+    font-size: 10px;
+    float: left;
+    display: block;
+}
+
+figcaption.r {
+    margin: 0px 15px 0px 0px;
+    font-size: 10px;
+    text-align: right;
+    float: right;
+    display: block;
+}
 
 
 /*liens*/
 a {
-    color: rgb(255, 255, 255);
+    color: orange;
     font-size: 13px;
+}
+
+a > figcaption {
+    color:orangered;
+    text-decoration: underline;
 }
 
 /*math {
