@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(21, 21, 21);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-width: 600px;
+    background-color: rgb(16, 16, 16);
+    font-family:Arial, Helvetica, sans-serif;
+    max-width: 800px;
     margin: auto;
     padding: 15px;
 }
@@ -10,20 +10,22 @@ body {
 
 /*navigation*/
 #navigation {
-    background-color: rgb(30, 30, 30);
+    /*background-color: rgb(30, 30, 30);*/
     padding: 2px;
-    border: solid rgb(98, 0, 255) 3px;
+    /*border: solid rgb(98, 0, 255) 1px;*/
     border-radius: 5px;
 }
 #navigation ul {
     width: fit-content; /*réduire le la grandeur de ul*/
     padding: 6px;
-    margin: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 2px;
 }
 #navigation li{
     display: inline; /*les mettre alignée*/
     /* border: solid 1px black; */
-    margin: 3px;
+    margin: 0px;
 }
 
 
@@ -43,13 +45,11 @@ canvas.centre {
 h1 {
     padding: 10px;
     margin:10px;
-    border-radius: 5px;
-    background-color: rgb(34, 34, 34);
+    /*background-color: rgb(34, 34, 34);*/
     
     color: orangered;
-    border-style: solid;
-    border-color: orangered;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*border-style: solid;
+    /*border-color: orangered;*/
     
 }
 
@@ -57,27 +57,46 @@ h2, h3 {
     /*text-align: center;*/
     padding: 5px 5px 5px 10px ;
     margin: 10px;
+    font-size: 20px;
     color: orangered;
 
     
 }
 
+
+/*paragaphe*/
 p {
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
     line-height: 20px;
-
+    max-width: 760px;
     text-align: justify;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: aliceblue;
     font-size: 14px;  
+}
+.important {
+    background-color: rgb(70, 0, 135);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border-left: rgb(93, 2, 191) solid 3px;
+    max-width: 760px;
     
+}
+.table {
+    max-width: 760px;
 }
 
 
+
 ul {
+    margin: 10px;
+    padding-left: 45px;
     color: aliceblue;
+    font-size: 13px;
+}
+.matière {
+    font-size: 13px;
 }
 
 
@@ -94,13 +113,7 @@ strong {
 
 
 
-/*paragaphe important*/
-.important {
-    background-color: rgb(70, 0, 135);
-    border-radius: 5px;
-    border-left: rgb(93, 2, 191) solid 3px;
-    
-}
+
 
 
 img {
@@ -160,7 +173,8 @@ figcaption.r {
 /*liens*/
 a {
     color: orange;
-    font-size: 13px;
+    font-size: 11px;
+    text-decoration: none;
 }
 
 a > figcaption {
@@ -184,10 +198,10 @@ a > figcaption {
 hr {
     border-style: solid;
     border-width:1px;
-    border-color: white ;
+    border-color: rgb(98, 0, 255) ;
     display: block;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 
