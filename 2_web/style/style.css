@@ -27,7 +27,19 @@ body {
     /* border: solid 1px black; */
     margin: 0px;
 }
-
+.ref {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 25px;
+}
+.reference {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    font-style: normal;
+    font-style:italic;
+    
+}
 
 
 
@@ -152,7 +164,7 @@ img.img-float-r {
     width: 150px;
     float: right;
     display: block;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 
@@ -165,7 +177,7 @@ figure.left {
 
 figure.right {
     float: right;
-    margin: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 0px;
     width: 200px;
     display: block;
 }
@@ -180,7 +192,7 @@ figcaption.l {
 }
 
 figcaption.r {
-    margin: 0px 15px 0px 0px;
+    margin: 0px 20px 0px 0px;
     font-size: 10px;
     text-align: right;
     float: right;
