@@ -898,7 +898,7 @@ context.lineTo(250, 100);
 context.stroke();
 ````
 
-![](images/maquette/trounoir.png)
+![](images/trounoir.png)
 
 Maintenant voici un exemple d'animation :
 
