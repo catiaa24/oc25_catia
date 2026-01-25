@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://by01wkugs6h7u"]
 
-[ext_resource type="Script" uid="uid://c5fm6lv31vbfb" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dal584bo7u551" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://bhoccdubg8n2k" path="res://mob.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://c5fm6lv31vbfb" path="res://scripts/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dal584bo7u551" path="res://scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bhoccdubg8n2k" path="res://scenes/mob.tscn" id="2_h2yge"]
 [ext_resource type="FontFile" uid="uid://cyxhh7ddkn62q" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
-[ext_resource type="Script" uid="uid://b0aq1rngbugow" path="res://score_label.gd" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://b0aq1rngbugow" path="res://scripts/score_label.gd" id="5_7mycd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
@@ -46,7 +46,7 @@ shape = SubResource("BoxShape3D_7dm0k")
 mesh = SubResource("BoxMesh_ig7tw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.25881907, 0.9659258, 0, -0.9659258, -0.25881907, 0, 21, 0)
+transform = Transform3D(1, 0, 0, 0, 0.053015634, 0.9985937, 0, -0.9985937, 0.053015634, 0, 21, 0)
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
@@ -64,6 +64,7 @@ far = 2000.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -14)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20072174)
 mesh = SubResource("CylinderMesh_0xm2m")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Cylinders"]
@@ -71,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29)
 mesh = SubResource("CylinderMesh_0xm2m")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -0.25090218)
 mesh = SubResource("CylinderMesh_0xm2m")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Cylinders"]
@@ -99,9 +100,9 @@ theme = SubResource("Theme_272bh")
 
 [node name="ScoreLabel" type="Label" parent="UserInterface"]
 layout_mode = 0
-offset_left = 28.0
+offset_left = 21.0
 offset_top = 15.0
-offset_right = 122.0
+offset_right = 115.0
 offset_bottom = 43.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Score : 0"
