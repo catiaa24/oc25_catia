@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://cgxl5uxknx3ka"]
+
+[ext_resource type="PackedScene" uid="uid://c1p7haw52ar7k" path="res://room.tscn" id="1_vy7fe"]
+[ext_resource type="PackedScene" uid="uid://ckhj22e850nm4" path="res://bed.tscn" id="2_10qhy"]
+[ext_resource type="PackedScene" uid="uid://dur38y1c06871" path="res://bookshelf.tscn" id="3_2y50f"]
+[ext_resource type="PackedScene" uid="uid://dru76166offm4" path="res://desk.tscn" id="4_obbqb"]
+[ext_resource type="PackedScene" uid="uid://v6copa7ehrc0" path="res://lamp.tscn" id="5_kjvky"]
+[ext_resource type="PackedScene" uid="uid://biih4t7kjdsg8" path="res://wardrobe.tscn" id="6_10qhy"]
+[ext_resource type="PackedScene" uid="uid://b6108kk5mxv5d" path="res://chair.tscn" id="7_2y50f"]
+
+[sub_resource type="Sky" id="Sky_2y50f"]
+
+[sub_resource type="Environment" id="Environment_obbqb"]
+background_mode = 1
+sky = SubResource("Sky_2y50f")
+ambient_light_source = 2
+ambient_light_color = Color(0.2285108, 0.2285108, 0.2285108, 1)
+
+[sub_resource type="Animation" id="Animation_2y50f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_obbqb"]
+resource_name = "light"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 1, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 1.5, 1.2, 1.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjvky"]
+_data = {
+&"RESET": SubResource("Animation_2y50f"),
+&"light": SubResource("Animation_obbqb")
+}
+
+[node name="House" type="Node3D" unique_id=1739282154]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1127610861]
+environment = SubResource("Environment_obbqb")
+
+[node name="Room" parent="." unique_id=1937314053 instance=ExtResource("1_vy7fe")]
+
+[node name="Bed" parent="Room" unique_id=1953739457 instance=ExtResource("2_10qhy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 1.6460481, -2.5)
+
+[node name="Bookshelf" parent="Room" unique_id=744433378 instance=ExtResource("3_2y50f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.3438902, 1.5, -3.7612107)
+
+[node name="Desk" parent="Room" unique_id=529953704 instance=ExtResource("4_obbqb")]
+transform = Transform3D(0.01055908, 0, 0.99994427, 0, 1, 0, -0.99994427, 0, 0.01055908, 3.9112606, 2.4429893, -1.9856358)
+
+[node name="Lamp" parent="Room" unique_id=194511738 instance=ExtResource("5_kjvky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6858807, 1.2054205, -3.6361985)
+
+[node name="Wardrobe" parent="Room" unique_id=1713230277 instance=ExtResource("6_10qhy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.1107464, 3.0986829, 3)
+
+[node name="Chair" parent="Room" unique_id=765036097 instance=ExtResource("7_2y50f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2266665, 1.8426561, -1.8270252)
+
+[node name="LightLamp" type="SpotLight3D" parent="Room" unique_id=202073418]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.7612648, 3.8232493, -3.3667536)
+light_color = Color(0.9344687, 0.7886779, 0, 1)
+light_energy = 3.344
+shadow_enabled = true
+
+[node name="LightWardrobe" type="OmniLight3D" parent="Room" unique_id=600578969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4821696, 3.4420214, 2.9132857)
+light_color = Color(9.62615e-07, 0.63276565, 0.11792148, 1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Room/LightWardrobe" unique_id=1982850806]
+libraries/ = SubResource("AnimationLibrary_kjvky")
+autoplay = &"light"
+
+[node name="Moon" type="SpotLight3D" parent="Room" unique_id=538807082]
+transform = Transform3D(1, 0, 0, 0, -0.6857676, 0.7278206, 0, -0.7278206, -0.6857676, 1.2111063, 8.859377, -7.61165)
+light_color = Color(0.827451, 1, 1, 1)
+light_energy = 7.484
+shadow_enabled = true
+spot_range = 20.0
+
+[node name="Room2" parent="." unique_id=932292595 instance=ExtResource("1_vy7fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8342085, 0, 0)
+
+[node name="Bed" parent="Room2" unique_id=1874959314 instance=ExtResource("2_10qhy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 1.6460481, -2.5)
+
+[node name="Bookshelf" parent="Room2" unique_id=450411240 instance=ExtResource("3_2y50f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.3438902, 1.5, -3.7612107)
+
+[node name="Desk" parent="Room2" unique_id=445505852 instance=ExtResource("4_obbqb")]
+transform = Transform3D(0.01055908, 0, 0.99994427, 0, 1, 0, -0.99994427, 0, 0.01055908, 3.9112606, 2.4429893, -1.9856358)
+
+[node name="Lamp" parent="Room2" unique_id=1445360466 instance=ExtResource("5_kjvky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6858807, 1.2054205, -3.6361985)
+
+[node name="Wardrobe" parent="Room2" unique_id=937510286 instance=ExtResource("6_10qhy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.1107464, 3.0986829, 3)
+
+[node name="Chair" parent="Room2" unique_id=1760219938 instance=ExtResource("7_2y50f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2266665, 1.8426561, -1.8270252)
+
+[node name="LightLamp" type="SpotLight3D" parent="Room2" unique_id=1966153126]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.7612648, 3.8232493, -3.3667536)
+visible = false
+light_color = Color(0.9344687, 0.7886779, 0, 1)
+light_energy = 3.344
+shadow_enabled = true
+
+[node name="LightRoom" type="SpotLight3D" parent="Room2" unique_id=1017867251]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0.51783085, 13.442021, 0.41328573)
+light_color = Color(1, 1, 0.72156864, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 22.5
+spot_angle = 50.69192
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Room2/LightRoom" unique_id=1252137690]
+libraries/ = SubResource("AnimationLibrary_kjvky")
+autoplay = &"light"
+
+[node name="Moon" type="SpotLight3D" parent="Room2" unique_id=1889912297]
+transform = Transform3D(1, 0, 0, 0, -0.6857676, 0.7278206, 0, -0.7278206, -0.6857676, 1.2111063, 8.859377, -7.61165)
+light_color = Color(0.827451, 1, 1, 1)
+light_energy = 7.484
+shadow_enabled = true
+spot_range = 20.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1265447982]
+transform = Transform3D(0.71178436, -0.42522317, 0.5590603, 0.07593157, 0.83784866, 0.540596, -0.6982818, -0.34233746, 0.6286554, 4.0478864, 7.453589, 4.0721364)
