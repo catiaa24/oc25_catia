@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctbeg6gqr6ec5"]
 
-[ext_resource type="Texture2D" uid="uid://cnojodcvrse7a" path="res://fire.jpg" id="1_2pqqt"]
+[ext_resource type="Texture2D" uid="uid://q760ommwkrln" path="res://fire2.webp" id="1_2pqqt"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ltu8"]
 emission_shape = 1
@@ -10,6 +10,8 @@ initial_velocity_max = 1.0
 gravity = Vector3(0, 1, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ecg"]
+transparency = 1
+albedo_color = Color(1, 0.8156863, 0, 1)
 albedo_texture = ExtResource("1_2pqqt")
 billboard_mode = 3
 particles_anim_h_frames = 1
