@@ -42,7 +42,10 @@ encourage les élèves à développer leur créativité et leur esprit logique t
 Le Gymnase du Bugnon félicite chaleureusement les quatre lauréats pour cette performance remarquable, qui contribue
 à faire rayonner l’établissement et à valoriser l’intérêt des jeunes pour les sciences.
 
+![](ChatGPT_4.png)
 ![](ChatGPT_2.png)
 ![](ChatGPT_3.png)
 
+## Commentaires
+Le texte est mieux réussi, mais les images étaient données collées et donc j'ai demandé à ChatGPT de les séparer.
 
