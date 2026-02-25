@@ -17,6 +17,8 @@ Cette victoire illustre l’engagement du Gymnase en faveur des sciences et conf
 élèves. Une cérémonie interne sera organisée prochainement pour célébrer cette performance et partager
 leur expérience avec les autres classes.
 
+![](/ChatGPT.png "élèves gagnant")
+
 ## Commentaires
 ChatGPT a dû mal interprêter le texte que je lui est fourni et donc il a combiné ce jeu avec l'IA.
 
