@@ -19,4 +19,7 @@ les élèves à développer leur créativité et leur esprit logique tout en tra
 Le Gymnase du Bugnon félicite chaleureusement les quatre lauréats pour cette performance remarquable, qui contribue à faire
 rayonner l’établissement et à valoriser l’intérêt des jeunes pour les sciences.
 
-
+## Commentaires
+Je trouve que c'est assez réussi à part le fait que les images ne soit pas très réaliste mais les personnes figurant sur les deux photos sont équvialentes.
+De plus, les prénoms des élèves qui sont sur l'articles ajoutent un côté réaliste. Globalement, le résultat est potable mais il est facilement facile de 
+vori qu'il s'agit d'un texte d'image générer par IA.
