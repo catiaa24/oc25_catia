@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://boggownk4lsa8"]
+
+[ext_resource type="Texture2D" uid="uid://b4haqph50vcjw" path="res://addons/assets/sky_background/autumn_field_puresky_4k.hdr" id="1_a202f"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_noarx"]
+panorama = ExtResource("1_a202f")
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("PanoramaSkyMaterial_noarx")
+
+[sub_resource type="Environment" id="Environment_a0tk4"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+albedo_color = Color(0.20364925, 0.7275553, 0.20125371, 1)
+
+[node name="Node3D" type="Node3D" unique_id=25814626]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=303678775]
+environment = SubResource("Environment_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=862261623]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, -0.095294, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1220789010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.595294, 0)
+use_collision = true
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_r3fl7")

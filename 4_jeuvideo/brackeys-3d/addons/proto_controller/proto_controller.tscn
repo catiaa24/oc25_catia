@@ -17,6 +17,7 @@ height = 1.8
 script = ExtResource("1_ucva2")
 can_sprint = true
 can_freefly = true
+jump_velocity = 4.5
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=536198280]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
