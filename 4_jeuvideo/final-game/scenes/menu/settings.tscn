@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c2fsml5a1jws0"]
+
+[ext_resource type="PackedScene" uid="uid://cua7i50vvbky6" path="res://scenes/objects/cube.tscn" id="1_rqcjd"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dxr1k"]
+
+[sub_resource type="Sky" id="Sky_yqeox"]
+sky_material = SubResource("PanoramaSkyMaterial_dxr1k")
+
+[sub_resource type="Environment" id="Environment_37860"]
+background_mode = 1
+sky = SubResource("Sky_yqeox")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0t5g5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_occy7"]
+albedo_color = Color(0.07015244, 0.07015244, 0.070152424, 1)
+disable_receive_shadows = true
+
+[sub_resource type="Environment" id="Environment_v208e"]
+glow_enabled = true
+glow_intensity = 3.09
+glow_strength = 0.0
+glow_bloom = 0.06
+
+[node name="Settings" type="Node3D" unique_id=1399784710]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1338532213]
+environment = SubResource("Environment_37860")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1477715377]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+sky_mode = 2
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1462747737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0016303062, -0.47122073, 0.0006008148)
+size = Vector3(50, 1, 50)
+material = SubResource("StandardMaterial3D_0t5g5")
+
+[node name="House" type="CSGCombiner3D" parent="." unique_id=2029689257]
+
+[node name="Wall" type="CSGBox3D" parent="House" unique_id=671946842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -3.5)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_occy7")
+
+[node name="Wall2" type="CSGBox3D" parent="House" unique_id=1928826880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.5)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_occy7")
+
+[node name="Wall3" type="CSGBox3D" parent="House" unique_id=121595578]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.25, 1, -0.25)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_occy7")
+
+[node name="Wall4" type="CSGBox3D" parent="House" unique_id=422075914]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.75, 1, 0.25)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_occy7")
+
+[node name="Cube" parent="." unique_id=1007077320 instance=ExtResource("1_rqcjd")]
+transform = Transform3D(0.60621774, 0, 0.35, 0, 0.7, 0, -0.35, 0, 0.60621774, 0.125, 0, 1.875)
+
+[node name="light1" type="OmniLight3D" parent="." unique_id=1310773743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, 1, 1.085)
+light_color = Color(1, 0, 0, 1)
+shadow_enabled = true
+omni_range = 2.0
+omni_attenuation = 2.0
+
+[node name="light2" type="OmniLight3D" parent="." unique_id=1365642245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.835, 1, 1.261)
+light_color = Color(0, 0, 1, 1)
+shadow_enabled = true
+omni_range = 2.0
+omni_attenuation = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1080683102]
+transform = Transform3D(-0.9999958, -0.0028326784, 0.0006078939, -0.002660356, 0.9809005, 0.1944921, -0.0011472169, 0.19448967, -0.9809039, 0.5872164, 1.1515634, -0.38365102)
+environment = SubResource("Environment_v208e")

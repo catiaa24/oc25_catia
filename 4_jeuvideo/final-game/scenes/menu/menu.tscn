@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://b5fu1i1rd20aj"]
+
+[ext_resource type="Script" uid="uid://be8bhc4s2vkp0" path="res://scripts/menu.gd" id="1_mcvr8"]
+[ext_resource type="PackedScene" uid="uid://cua7i50vvbky6" path="res://scenes/objects/cube.tscn" id="2_e0arn"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4h3mk"]
+
+[sub_resource type="Sky" id="Sky_037ec"]
+sky_material = SubResource("PanoramaSkyMaterial_4h3mk")
+
+[sub_resource type="Environment" id="Environment_vjb58"]
+background_mode = 1
+sky = SubResource("Sky_037ec")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqeox"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h3mk"]
+albedo_color = Color(0.07015244, 0.07015244, 0.070152424, 1)
+disable_receive_shadows = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+bg_color = Color(0.09081534, 8.005347e-05, 0.2831489, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.049035013, 3.5327972e-05, 0.18668526, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
+bg_color = Color(0.23632818, 0.00046465427, 0.6039969, 1)
+border_width_left = 5
+border_width_top = 2
+border_width_right = 5
+border_width_bottom = 4
+border_color = Color(0.1654239, 0.00021562577, 0.45633286, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0.16849524, 0.00021244913, 0.46914244, 1)
+border_width_left = 5
+border_width_top = 2
+border_width_right = 5
+border_width_bottom = 10
+border_color = Color(0.108559184, 0.00010478064, 0.3249668, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Menu" type="Node3D" unique_id=617216278]
+script = ExtResource("1_mcvr8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=715017899]
+environment = SubResource("Environment_vjb58")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1784309915]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+sky_mode = 2
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1866109878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0016303062, -0.47122073, 0.0006008148)
+size = Vector3(50, 1, 50)
+material = SubResource("StandardMaterial3D_yqeox")
+
+[node name="House" type="CSGCombiner3D" parent="." unique_id=916025242]
+
+[node name="Wall" type="CSGBox3D" parent="House" unique_id=1484244294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -3.5)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_4h3mk")
+
+[node name="Wall2" type="CSGBox3D" parent="House" unique_id=655335983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.5)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_4h3mk")
+
+[node name="Wall3" type="CSGBox3D" parent="House" unique_id=861240810]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.25, 1, -0.25)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_4h3mk")
+
+[node name="Wall4" type="CSGBox3D" parent="House" unique_id=438029734]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.75, 1, 0.25)
+size = Vector3(7, 4, 0.5)
+material = SubResource("StandardMaterial3D_4h3mk")
+
+[node name="Cube" parent="." unique_id=1007077320 instance=ExtResource("2_e0arn")]
+transform = Transform3D(0.60621774, 0, 0.35, 0, 0.7, 0, -0.35, 0, 0.60621774, 0.125, 0, 1.875)
+
+[node name="light1" type="OmniLight3D" parent="." unique_id=859230694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, 1, 1.085)
+light_color = Color(1, 0, 0, 1)
+shadow_enabled = true
+omni_range = 2.0
+omni_attenuation = 2.0
+
+[node name="light2" type="OmniLight3D" parent="." unique_id=1639192279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.835, 1, 1.261)
+light_color = Color(0, 0, 1, 1)
+shadow_enabled = true
+omni_range = 2.0
+omni_attenuation = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=675886747]
+transform = Transform3D(-0.9999958, -0.0028326784, 0.0006078939, -0.002660356, 0.9809005, 0.1944921, -0.0011472169, 0.19448967, -0.9809039, 0.5872164, 1.1515634, -0.38365102)
+
+[node name="Label" type="Label" parent="." unique_id=138665329]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 153.0
+offset_top = -43.0
+offset_right = 418.0
+offset_bottom = 51.0
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Titre"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1548230834]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.49537036
+anchor_right = 1.0
+anchor_bottom = 0.5046296
+offset_left = -417.0
+offset_top = -79.0
+offset_right = -128.0
+offset_bottom = 79.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1306963511]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_con2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vjb58")
+text = "New Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=2037401528]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_con2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vjb58")
+text = "Settings"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=158596535]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_con2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vjb58")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_quit_pressed"]
