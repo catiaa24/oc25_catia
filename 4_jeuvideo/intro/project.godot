@@ -15,6 +15,11 @@ run/main_scene="uid://bmvxqvggom3l1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=2000
+window/size/viewport_height=1300
+
 [input]
 
 move_left={

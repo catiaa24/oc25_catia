@@ -16,11 +16,11 @@ func _process(delta: float) -> void:
 	position += basis * input * 0.1
 	
 	var dir = Vector2.ZERO
-	dir.x = Input.get_axis("ui_left", "ui_right")
+	dir.x = Input.get_axis("ui_right", "ui_left")
 	dir.y = Input.get_axis("ui_down", "ui_up")
 	
 	if dir:
-		tilt += dir * 0.05
+		tilt += dir * 0.05 # tilt représente l'angle de rotation de la caméra
 		tilt.y = clamp(-PI/2, tilt.y, PI/2)
 		basis = Basis()
 		rotation.y = tilt.x
