@@ -97,19 +97,12 @@ material = SubResource("StandardMaterial3D_4h3mk")
 [node name="Cube" parent="." unique_id=1007077320 instance=ExtResource("2_e0arn")]
 transform = Transform3D(0.60621774, 0, 0.35, 0, 0.7, 0, -0.35, 0, 0.60621774, 0.125, 0, 1.875)
 
-[node name="light1" type="OmniLight3D" parent="." unique_id=859230694]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.892, 1, 1.085)
-light_color = Color(1, 0, 0, 1)
-shadow_enabled = true
-omni_range = 2.0
-omni_attenuation = 2.0
-
 [node name="light2" type="OmniLight3D" parent="." unique_id=1639192279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.835, 1, 1.261)
 light_color = Color(0, 0, 1, 1)
 shadow_enabled = true
 omni_range = 2.0
-omni_attenuation = 0.1
+omni_attenuation = -4.7
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=675886747]
 transform = Transform3D(-0.9999958, -0.0028326784, 0.0006078939, -0.002660356, 0.9809005, 0.1944921, -0.0011472169, 0.19448967, -0.9809039, 0.5872164, 1.1515634, -0.38365102)

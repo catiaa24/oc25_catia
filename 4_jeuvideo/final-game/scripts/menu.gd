@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_play_pressed() -> void:
 	print("play")
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://scenes/Dialog.tscn")
 	
 
 func _on_settings_pressed() -> void:
