@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialog="*uid://cfj4vqmpvjmoy"
-Transition2="*uid://nee7r8s75qcl"
+Transition2="*uid://by3njctqtdcsu"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]

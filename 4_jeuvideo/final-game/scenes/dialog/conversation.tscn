@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pyxra5h16r25"]
 
 [ext_resource type="PackedScene" uid="uid://b41mrlwt4wl22" path="res://scenes/characters/assistant.tscn" id="1_t0f7h"]
-[ext_resource type="PackedScene" uid="uid://5c7p13kpal7f" path="res://scenes/dialog.tscn" id="2_fxcju"]
+[ext_resource type="PackedScene" uid="uid://bbddnhcv6n50x" path="res://scenes/dialog/Dialog.tscn" id="2_3woay"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t0f7h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,4 +39,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
 operation = 2
 size = Vector3(10, 10, 10)
 
-[node name="Dialog" parent="." unique_id=1358809422 instance=ExtResource("2_fxcju")]
+[node name="Dialog" parent="." unique_id=1358809422 instance=ExtResource("2_3woay")]
