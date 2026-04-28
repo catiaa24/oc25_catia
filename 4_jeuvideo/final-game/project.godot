@@ -15,6 +15,11 @@ run/main_scene="uid://b5fu1i1rd20aj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dialog="*uid://cfj4vqmpvjmoy"
+Transition2="*uid://by3njctqtdcsu"
+
 [display]
 
 window/size/mode=3

@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://5c7p13kpal7f"]
 
 [ext_resource type="Script" uid="uid://dre387wb4j84t" path="res://scripts/dialog.gd" id="1_ecvbg"]
+[ext_resource type="Script" uid="uid://de4mxy4vl4gfr" path="res://scripts/polygon_2d.gd" id="2_36pgd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkg5k"]
-bg_color = Color(0.37254903, 0.43529412, 0.8666667, 1)
+bg_color = Color(2.695322e-06, 0.79720837, 0.12187954, 1)
 border_width_left = 5
 border_width_top = 2
 border_width_right = 5
 border_width_bottom = 6
-border_color = Color(0.20236588, 0.23432493, 0.59577376, 1)
+border_color = Color(1.2634322e-06, 0.4307099, 0.04581113, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -40,10 +41,21 @@ script = ExtResource("1_ecvbg")
 
 [node name="Text" type="Label" parent="Panel/Container" unique_id=849397528]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.25861663, 0.016141057, 1)
 theme_override_font_sizes/font_size = 22
+text = "texte"
 
 [node name="Timer" type="Timer" parent="Panel/Container" unique_id=2096106171]
 wait_time = 0.05
 autostart = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Panel/Container" unique_id=1490123633]
+position = Vector2(1005.22723, -30)
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0.25882354, 0.015686275, 1)
+polygon = PackedVector2Array(61.234924, 179.07643, 9.343903, 150.87495, 9.126694, 206.87453)
+uv = PackedVector2Array(22.568512, 99.608635, 8.568512, 134.2753, 37.23517, 134.94199)
+script = ExtResource("2_36pgd")
+amplitude = 1.0
 
 [connection signal="timeout" from="Panel/Container/Timer" to="Panel/Container" method="_on_timer_timeout"]

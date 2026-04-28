@@ -13,8 +13,9 @@ func _process(delta: float) -> void:
 
 
 func _on_play_pressed() -> void:
-	print("play")
-	get_tree().change_scene_to_file("res://scenes/Dialog.tscn")
+	Transition2.transition()
+	await Transition2.on_transition_finished
+	get_tree().change_scene_to_file("res://scenes/conversation.tscn")
 	
 
 func _on_settings_pressed() -> void:
