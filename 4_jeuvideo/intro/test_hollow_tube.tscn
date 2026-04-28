@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://idv7iwprofto"]
+
+[ext_resource type="Script" uid="uid://cag3xg32wejox" path="res://addons/hollow_tube.gd" id="1_7ayxr"]
+
+[node name="TestHollowTube" type="Node3D" unique_id=1820456992]
+
+[node name="HollowTube" type="CSGCylinder3D" parent="." unique_id=1163355744]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.5625, 0)
+radius = 1.0
+height = 3.125
+sides = 32
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://cag3xg32wejox"
+
+[node name="HollowTube2" type="CSGCylinder3D" parent="." unique_id=392129126]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5, 0.125, 0)
+radius = 1.0
+height = 1.25
+sides = 32
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://cag3xg32wejox"
+
+[node name="HollowTube3" type="CSGCylinder3D" parent="." unique_id=1240515171]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5, 1.125, 0)
+radius = 0.75
+height = 1.25
+sides = 32
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://cag3xg32wejox"

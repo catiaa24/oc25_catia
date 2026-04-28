@@ -2,10 +2,17 @@
 extends CSGBox3D
 class_name HollowBox
 
+## A hollow CSG Box
+
+## This creates a hollow CSG Box along the z-axis  with given wall thickness.
+
+
+## Wall thickness of the hollow box.
 @export var thickness := 0.1:
 	set(value):
 		thickness = value
 		create()
+
 
 ## Button action to rebuild the hollow tube.
 @export_tool_button("Rebuild") var action := create
@@ -22,6 +29,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
+
+## Create a hollow box when called the first time, update the existing box thereafter.
 func create():
 	var inner = null
 	# find a procedurally created node

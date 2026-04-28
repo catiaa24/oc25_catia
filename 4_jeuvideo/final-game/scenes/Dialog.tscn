@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5c7p13kpal7f"]
 
-[ext_resource type="Script" uid="uid://dre387wb4j84t" path="res://scripts/dialog.gd" id="1_ecvbg"]
-[ext_resource type="Script" uid="uid://de4mxy4vl4gfr" path="res://scripts/polygon_2d.gd" id="2_36pgd"]
+[ext_resource type="Script" uid="uid://dre387wb4j84t" path="res://scripts/dialog/dialog.gd" id="1_ecvbg"]
+[ext_resource type="Script" uid="uid://de4mxy4vl4gfr" path="res://scripts/dialog/polygon_2d.gd" id="2_36pgd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkg5k"]
 bg_color = Color(2.695322e-06, 0.79720837, 0.12187954, 1)

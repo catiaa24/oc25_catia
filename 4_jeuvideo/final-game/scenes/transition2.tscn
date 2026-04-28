@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://by3njctqtdcsu"]
 
-[ext_resource type="Script" uid="uid://nee7r8s75qcl" path="res://scripts/transition_2.gd" id="1_anrvw"]
+[ext_resource type="Script" uid="uid://nee7r8s75qcl" path="res://scripts/transition/transition_2.gd" id="1_anrvw"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yff4o"]
 emission_shape_scale = Vector3(5, 5, 1)

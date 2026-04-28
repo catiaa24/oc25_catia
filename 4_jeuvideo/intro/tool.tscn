@@ -25,16 +25,16 @@ glow_enabled = true
 environment = SubResource("Environment_3gk12")
 
 [node name="Rotate" type="CSGBox3D" parent="." unique_id=1176643821]
-transform = Transform3D(1, 0, 0, 0, -0.9064645, 0.4222817, 0, -0.4222817, -0.9064645, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.943096, -0.33252025, 0, 0.33252025, 0.943096, 0, 0, 0)
 script = ExtResource("1_f6vxs")
 speed = 15
 
 [node name="Move" type="CSGBox3D" parent="." unique_id=422487668]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.7252922, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5236214, 0)
 script = ExtResource("2_3gk12")
 
 [node name="Move2" type="CSGBox3D" parent="." unique_id=1834032392]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.36327854, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5236214, 0)
 script = ExtResource("2_3gk12")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=50191703]

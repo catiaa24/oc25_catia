@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5fu1i1rd20aj"]
 
-[ext_resource type="Script" uid="uid://be8bhc4s2vkp0" path="res://scripts/menu.gd" id="1_mcvr8"]
+[ext_resource type="Script" uid="uid://be8bhc4s2vkp0" path="res://scripts/menu/menu.gd" id="1_mcvr8"]
 [ext_resource type="PackedScene" uid="uid://cua7i50vvbky6" path="res://scenes/objects/cube.tscn" id="2_e0arn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4h3mk"]

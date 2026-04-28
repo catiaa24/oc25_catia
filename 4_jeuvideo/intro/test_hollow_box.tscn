@@ -2,22 +2,28 @@
 
 [ext_resource type="Script" uid="uid://duqnxryqrs50k" path="res://addons/hollow_box.gd" id="1_hrdi2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrdi2"]
+albedo_color = Color(1, 0, 1, 1)
+
 [node name="TestHollowBox" type="Node3D" unique_id=460759592]
 
 [node name="HollowBox" type="CSGBox3D" parent="." unique_id=1913625969]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
-size = Vector3(1, 2.5, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.875, -0.25)
+size = Vector3(4, 3.75, 1.5)
+material = SubResource("StandardMaterial3D_hrdi2")
 script = ExtResource("1_hrdi2")
 metadata/_custom_type_script = "uid://duqnxryqrs50k"
 
 [node name="HollowBox2" type="CSGBox3D" parent="." unique_id=373564231]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.25, 0)
 size = Vector3(2, 2, 1)
+material = SubResource("StandardMaterial3D_hrdi2")
 script = ExtResource("1_hrdi2")
 metadata/_custom_type_script = "uid://duqnxryqrs50k"
 
 [node name="HollowBox3" type="CSGBox3D" parent="." unique_id=267677394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
-size = Vector3(1.5, 1.5, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.375, 0)
+size = Vector3(1.5, 1.75, 1)
+material = SubResource("StandardMaterial3D_hrdi2")
 script = ExtResource("1_hrdi2")
 metadata/_custom_type_script = "uid://duqnxryqrs50k"
