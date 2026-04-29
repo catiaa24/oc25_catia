@@ -14,8 +14,7 @@ func _process(delta: float) -> void:
 	else :
 		
 		if Input.is_action_just_released("interact"):
-			print("screen")
-			pass
+			get_tree().change_scene_to_file("res://scenes/screen.tscn")
 		
 
 func _on_body_entered(body: CharacterBody3D) -> void:
