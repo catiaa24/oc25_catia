@@ -117,8 +117,3 @@ material = SubResource("StandardMaterial3D_jgubl")
 
 [node name="Design" type="MeshInstance3D" parent="." unique_id=1180998086]
 mesh = SubResource("ArrayMesh_k760b")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=534908327]
-transform = Transform3D(1, 0, 0, 0, -0.95744556, 0.28861398, 0, -0.28861398, -0.95744556, 0, 0.64070666, 0.17565316)
-light_color = Color(0, 0.7294118, 1, 1)
-spot_angle = 34.59673

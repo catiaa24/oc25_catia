@@ -242,9 +242,3 @@ material = SubResource("StandardMaterial3D_87xom")
 
 [node name="Design" type="MeshInstance3D" parent="." unique_id=1981736241]
 mesh = SubResource("ArrayMesh_k2iji")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=467233495]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4524704, 1.2044029, 0.46931088)
-light_color = Color(1, 0, 0, 1)
-shadow_enabled = true
-omni_range = 3.0

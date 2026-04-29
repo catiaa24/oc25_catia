@@ -213,3 +213,7 @@ func _physics_process(delta: float) -> void:
 #
 #Ta Camera3D doit être hors du CharacterBody3D dans la hiérarchie
 #Clique sur ton CharacterBody3D → dans l'inspecteur tu vois le champ Camera → glisses-y ta Camera3D
+
+
+func _on_screen_acces_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

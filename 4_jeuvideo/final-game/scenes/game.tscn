@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bw1unl2qpys63"]
 
 [ext_resource type="PackedScene" uid="uid://ctx0skvdfl87m" path="res://scenes/characters/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://cua7i50vvbky6" path="res://scenes/objects/cube.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bgm1uy3i8bmgn" path="res://scenes/one.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cbrq532amn2u7" path="res://scenes/objects/computer.tscn" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://btp7o4ny5wu0a" path="res://scripts/ComputerAcces.gd" id="5_iywne"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -19,11 +19,13 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cj0n"]
-albedo_color = Color(0, 0, 0, 1)
+albedo_color = Color(0.35906905, 0.35906908, 0.35906896, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqjtg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwrxv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p57ef"]
 
 [node name="Game" type="Node3D" unique_id=124284969]
 
@@ -71,11 +73,33 @@ camera = NodePath("../Camera3D")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=359307422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
 
-[node name="Cube" parent="." unique_id=1007077320 instance=ExtResource("2_yqjtg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
-
 [node name="One" parent="." unique_id=943898390 instance=ExtResource("3_lnu2h")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -16.5, 0, -10.75)
 
 [node name="Computer" parent="." unique_id=1781853886 instance=ExtResource("4_lbhrr")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -8.25, -0.5, -15.75)
+
+[node name="ScreenAcces" type="Area3D" parent="Computer" unique_id=684118079]
+script = ExtResource("5_iywne")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Computer/ScreenAcces" unique_id=1332038839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.625)
+shape = SubResource("SphereShape3D_p57ef")
+debug_color = Color(0.93333334, 0, 0.6392157, 1)
+
+[node name="ComputerLight" type="SpotLight3D" parent="." unique_id=893831188]
+transform = Transform3D(1, 0, 0, 0, -0.9702197, 0.24222666, 0, -0.24222666, -0.9702197, -8.2335205, 2.2224736, -14.474213)
+light_color = Color(0.60784316, 1, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+spot_attenuation = 0.5
+
+[node name="OneLight" type="OmniLight3D" parent="." unique_id=2022707380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.95247, 2.704403, -15.030689)
+light_color = Color(1, 0, 0, 1)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 3.75
+
+[connection signal="body_entered" from="Computer/ScreenAcces" to="Computer/ScreenAcces" method="_on_body_entered"]
+[connection signal="body_exited" from="Computer/ScreenAcces" to="Computer/ScreenAcces" method="_on_body_exited"]

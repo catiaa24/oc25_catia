@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://2p143rmct5ve"]
+
+[ext_resource type="Script" uid="uid://dp6sj5nwedfig" path="res://scripts/menu/music.gd" id="1_3sikt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfxlu"]
+bg_color = Color(5.0055983e-06, 0.7527222, 0.75248724, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mhdm"]
+bg_color = Color(0.565, 1.163, 1.078, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Control" type="HSlider" unique_id=1780935338]
+offset_left = 105.0
+offset_top = 34.0
+offset_right = 382.0
+offset_bottom = 62.0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_jfxlu")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_0mhdm")
+script = ExtResource("1_3sikt")

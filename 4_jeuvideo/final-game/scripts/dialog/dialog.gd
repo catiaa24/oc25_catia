@@ -9,13 +9,12 @@ var question = 2
 
 var dialog1 = [
 	"Bonjour !",
-	"Vous devez être le petit nouveau !",
-	"Quel est votre nom ?",
-	"Enchanté ! Je me présente, je suis ChatLLM",
-	"Je suis votre assistant, qui va vous guider dans l'entreprise.",
-	"Je dois avouer que même moi parfois je m'y perd.",
-	"Votre but sera de construire des token et de faire du embedding.",
-	"Pas de panique surtout ! Je vais vous aidez pas à pas."
+	"Vous devez être le petit nouveau, Mob.",
+	"Enchanté ! Je me présente, je suis Bob, votre assistant.",
+	"C'est moi qui est chargé de vous aidez au mieux dans l'entreprise.",
+	"Je dois avouer que parfois même moi je m'y perd.",
+	"Votre but sera de préparer les données d'entraînement pour les LLM.",
+	"Surtout pas de panique ! Je vais vous aidez."
 	
 ]
 
@@ -28,7 +27,6 @@ func _ready() -> void:
 	print(Dialog.previous_scene)
 	
 	if Dialog.previous_scene == "Menu":
-		print(543543)
 		label.text = dialog1[phrase]
 	
 	label.visible_characters = 0
@@ -39,7 +37,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 		
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_right"):
 		
 		if label.visible_characters < label.text.length():
 			label.visible_characters = label.text.length()
