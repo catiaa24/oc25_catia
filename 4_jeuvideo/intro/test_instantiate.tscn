@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://eyop333dnv6h"]
+
+[ext_resource type="Script" uid="uid://c0dfb1f18r7ef" path="res://addons/instantiate.gd" id="1_1cpi2"]
+[ext_resource type="Script" uid="uid://tkeysk5xi15r" path="res://addons/instantiate_multiple.gd" id="2_jl3yg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cpi2"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="TestInstantiate" type="Node3D" unique_id=1745419911]
+
+[node name="Instantiate" type="CSGCombiner3D" parent="." unique_id=1752270640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
+visible = false
+script = ExtResource("1_1cpi2")
+material = SubResource("StandardMaterial3D_1cpi2")
+metadata/_custom_type_script = "uid://c0dfb1f18r7ef"
+
+[node name="Box" type="CSGBox3D" parent="Instantiate" unique_id=2039948468]
+material = SubResource("StandardMaterial3D_1cpi2")
+
+[node name="InstantiateMultiple" type="CSGCombiner3D" parent="." unique_id=1574553461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_jl3yg")
+metadata/_custom_type_script = "uid://tkeysk5xi15r"
+
+[node name="Box" type="CSGBox3D" parent="InstantiateMultiple" unique_id=681009267]
+
+[node name="Box2" type="CSGBox3D" parent="InstantiateMultiple" unique_id=704782962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Box3" type="CSGBox3D" parent="InstantiateMultiple" unique_id=1087211205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Box4" type="CSGBox3D" parent="InstantiateMultiple" unique_id=607702090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+
+[node name="Box5" type="CSGBox3D" parent="InstantiateMultiple" unique_id=219618637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Box6" type="CSGBox3D" parent="InstantiateMultiple" unique_id=682287052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Box7" type="CSGBox3D" parent="InstantiateMultiple" unique_id=1938436618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+
+[node name="Box8" type="CSGBox3D" parent="InstantiateMultiple" unique_id=942369646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
+
+[node name="InstantiateMultiple2" type="CSGCombiner3D" parent="." unique_id=1214753049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -4.5)
+script = ExtResource("2_jl3yg")
+metadata/_custom_type_script = "uid://tkeysk5xi15r"
+
+[node name="Box" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=306193121]
+
+[node name="Box2" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=1383324498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Box3" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=594207697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Box4" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=838811084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+
+[node name="Box5" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=2097427914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Box6" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=577776856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Box7" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=1422594879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+
+[node name="Box8" type="CSGBox3D" parent="InstantiateMultiple2" unique_id=1041404744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
