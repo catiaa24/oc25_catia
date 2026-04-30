@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dre387wb4j84t" path="res://scripts/dialog/dialog.gd" id="1_ecvbg"]
 [ext_resource type="Script" uid="uid://de4mxy4vl4gfr" path="res://scripts/dialog/polygon_2d.gd" id="2_36pgd"]
+[ext_resource type="FontFile" uid="uid://ch061a1p7p5s4" path="res://fonts/Perfect DOS VGA 437 Win.ttf" id="2_qu0pp"]
 
 [sub_resource type="FontVariation" id="FontVariation_xrh6t"]
 variation_embolden = 1.0
@@ -69,6 +70,7 @@ script = ExtResource("1_ecvbg")
 [node name="Text" type="Label" parent="Panel/Container" unique_id=849397528]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.25861663, 0.016141057, 1)
+theme_override_fonts/font = ExtResource("2_qu0pp")
 theme_override_font_sizes/font_size = 22
 text = "texte"
 
@@ -77,7 +79,7 @@ wait_time = 0.05
 autostart = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Panel/Container" unique_id=1490123633]
-position = Vector2(1014.9002, -30)
+position = Vector2(1006.78784, -30)
 scale = Vector2(0.5, 0.5)
 color = Color(0, 0.25882354, 0.015686275, 1)
 polygon = PackedVector2Array(61.234924, 179.07643, 9.343903, 150.87495, 9.126694, 206.87453)
