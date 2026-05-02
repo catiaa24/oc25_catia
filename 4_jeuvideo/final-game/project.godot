@@ -26,7 +26,6 @@ Transition2="*uid://by3njctqtdcsu"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]

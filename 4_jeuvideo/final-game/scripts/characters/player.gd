@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 4.5
 const CAMERA_HEIGHT = 5.0
 
 func _ready() -> void:
-	camera.rotation_degrees = Vector3(-45, 0, 0)
+	camera.rotation_degrees = Vector3(-30, 0, 0)
 
 
 
