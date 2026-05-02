@@ -2,7 +2,7 @@ extends Control
 
 
 func ouvrir_navigateur():
-	OS.shell_open("https://www.google.com")
+	OS.shell_open("https://godotengine.org/fr/")
 	
 # Aide de claude
 
