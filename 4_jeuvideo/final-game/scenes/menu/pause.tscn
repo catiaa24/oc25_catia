@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://csadvh11b5ctm"]
+
+[ext_resource type="Script" uid="uid://vf6cimppy22r" path="res://scripts/menu/pause.gd" id="1_nesnr"]
+[ext_resource type="FontVariation" uid="uid://c26sor1nhxiad" path="res://new_font_variation.tres" id="2_4wejy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nesnr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wejy"]
+bg_color = Color(1.1431053e-07, 0.17991927, 0.17991933, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="FontVariation" id="FontVariation_nesnr"]
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4wejy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mvc1"]
+bg_color = Color(0.21176471, 0.7372549, 0.80784315, 0.61960787)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0, 2.2421255, 2.2421255, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mso8"]
+bg_color = Color(0.21176471, 0.7372549, 0.80784315, 0.3764706)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 5
+border_color = Color(0, 2.2419872, 2.2419872, 0.7882353)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Pause" type="CanvasLayer" unique_id=938887596]
+process_mode = 3
+script = ExtResource("1_nesnr")
+
+[node name="Black" type="Panel" parent="." unique_id=1821391888]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nesnr")
+
+[node name="Panel" type="Panel" parent="." unique_id=1627697764]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 30.0
+offset_right = -28.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wejy")
+
+[node name="Label" type="Label" parent="." unique_id=1647316001]
+offset_left = 50.0
+offset_top = 38.0
+offset_right = 477.0
+offset_bottom = 151.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_4wejy")
+theme_override_font_sizes/font_size = 50
+text = "Pause"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=450704778]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = -152.0
+offset_right = 346.0
+offset_bottom = 12.0
+grow_vertical = 2
+
+[node name="Return" type="Button" parent="VBoxContainer" unique_id=2142824468]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_nesnr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4wejy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvc1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1mso8")
+text = "Return"
+alignment = 0
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=1021400806]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_nesnr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4wejy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvc1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1mso8")
+text = "Menu"
+alignment = 0
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=155797835]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_nesnr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4wejy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvc1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1mso8")
+text = "Quit"
+alignment = 0
+
+[connection signal="pressed" from="VBoxContainer/Return" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_button_pressed"]

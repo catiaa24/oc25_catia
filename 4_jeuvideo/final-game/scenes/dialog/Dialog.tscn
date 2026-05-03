@@ -79,7 +79,7 @@ wait_time = 0.05
 autostart = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Panel/Container" unique_id=1490123633]
-position = Vector2(1006.78784, -30)
+position = Vector2(1011.51276, -30)
 scale = Vector2(0.5, 0.5)
 color = Color(0, 0.25882354, 0.015686275, 1)
 polygon = PackedVector2Array(61.234924, 179.07643, 9.343903, 150.87495, 9.126694, 206.87453)

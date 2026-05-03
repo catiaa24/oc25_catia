@@ -11,7 +11,7 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_t0f7h")
 
 [sub_resource type="Environment" id="Environment_o4mgf"]
-background_mode = 2
+background_mode = 1
 sky = SubResource("Sky_fxcju")
 tonemap_mode = 2
 glow_enabled = true
@@ -22,8 +22,11 @@ glow_enabled = true
 environment = SubResource("Environment_o4mgf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1457228274]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.5000001, -0.75, 0.43301257, 3.476048e-08, 0.49999994, 0.86602545, 0, 0, 0)
+light_color = Color(0, 0.7921569, 1, 1)
+light_energy = 0.1
 shadow_enabled = true
+sky_mode = 1
 
 [node name="Assistant" parent="." unique_id=1132874718 instance=ExtResource("1_t0f7h")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.5507814, -1.1050673, 0.074359715)
@@ -40,3 +43,8 @@ operation = 2
 size = Vector3(10, 10, 10)
 
 [node name="Dialog" parent="." unique_id=1358809422 instance=ExtResource("2_3woay")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=292251224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, 2)
+light_energy = 0.5
+omni_range = 3.0

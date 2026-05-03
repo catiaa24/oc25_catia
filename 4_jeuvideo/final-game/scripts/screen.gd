@@ -12,6 +12,8 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("escape"):
 		print("return")
+		Transition2.transition()
+		await Transition2.on_transition_finished
 		get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 

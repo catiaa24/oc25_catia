@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_released("interact"):
 			Transition2.transition()
 			await Transition2.on_transition_finished
-			get_tree().change_scene_to_file("res://scenes/screenB.scn")
+			get_tree().change_scene_to_file("res://scenes/exam/neuron.scn")
 		
 
 func _on_body_entered(body: CharacterBody3D) -> void:

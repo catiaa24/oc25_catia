@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://7cjcrnic4uy4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6efy"]
+bg_color = Color(0, 0.45953482, 0.45953476, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0dir"]
+bg_color = Color(0.21176471, 0.7372549, 0.80784315, 0.61960787)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0, 2.2421255, 2.2421255, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arce5"]
+bg_color = Color(0.21176471, 0.7372549, 0.80784315, 0.3764706)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 5
+border_color = Color(0, 2.2419872, 2.2419872, 0.7882353)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="PauseButton" type="Control" unique_id=1635559261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause" type="Button" parent="." unique_id=934799769]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 13.0
+offset_right = 1140.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_p6efy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k0dir")
+theme_override_styles/hover = SubResource("StyleBoxFlat_arce5")
+text = "||"

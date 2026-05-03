@@ -170,7 +170,7 @@ material = SubResource("StandardMaterial3D_r6ujh")
 mesh = SubResource("ArrayMesh_ii4nk")
 
 [node name="Propeller" type="CSGBox3D" parent="." unique_id=2090059773]
-transform = Transform3D(-0.07932406, 0, -0.99684525, 0, 1, 0, 0.99684525, 0, -0.07932406, 0.0018191338, 0.6430384, -0.22446688)
+transform = Transform3D(-0.29564273, 0, -0.9552948, 0, 1, 0, 0.9552948, 0, -0.29564273, 0.0018191338, 0.6430384, -0.22446688)
 size = Vector3(1, 0.11590576, 1)
 material = SubResource("StandardMaterial3D_ii4nk")
 script = ExtResource("1_ii4nk")
